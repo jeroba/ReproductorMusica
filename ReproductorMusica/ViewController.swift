@@ -25,21 +25,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func play() {
-        if !reproductor.playing{
-            reproductor.play()
+        if tituloCancion.text! != ""{
+            if !reproductor.playing{
+                reproductor.play()
+            }
         }
     }
     
     @IBAction func pausar() {
-        if reproductor.playing{
-            reproductor.pause()
+        if tituloCancion.text! != ""{
+            if reproductor.playing{
+                reproductor.pause()
+            }
         }
     }
 
     @IBAction func detener() {
-        if reproductor.playing{
-            reproductor.stop()
-            reproductor.currentTime = 0.0
+        if tituloCancion.text! != ""{
+            if reproductor.playing{
+                reproductor.stop()
+                reproductor.currentTime = 0.0
+            }
         }
     }
     
